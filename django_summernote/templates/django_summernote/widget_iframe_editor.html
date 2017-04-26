@@ -25,11 +25,7 @@
         console.log(window.parent);
 
         // include summernote language pack, synchronously
-        if( settings.lang != 'en-US' ) {
-            $.ajaxSetup({async:false});
-            $.getScript('{% static "django_summernote/lang/summernote-" %}' + settings.lang + '.min.js');
-            $.ajaxSetup({async:true});
-        }
+        
 
         $('#summernote').html(src.value);
 
