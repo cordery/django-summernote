@@ -19,7 +19,10 @@
         $(src).hide(); /* for IE */
 
         /* get settings from parent window */
+        
         var settings = window.parent.settings_{{ id }};
+        console.log(settings);
+        console.log(window.parent);
 
         // include summernote language pack, synchronously
         if( settings.lang != 'en-US' ) {
